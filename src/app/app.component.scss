@@ -1,0 +1,9 @@
+.product-name {
+  @apply flex justify-around;
+}
+
+.container {
+  &__content {
+    @apply sm:w-[50%] hover:shadow-2xl w-[100%] rounded-2xl p-[16px] flex-col justify-center text-justify p-[16px] bg-amber-200;
+  }
+}

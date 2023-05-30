@@ -1,0 +1,9 @@
+<div class="flex flex-row flex-wrap items-center pl-[40px] gap-5">
+  <div  *ngFor="let item of dataInput" class="flex flex-col justify-center bg-blue-300 w-[23%] p-[20px] cursor-pointer
+          hover:scale-95 hover:shadow-2xl">
+    <img src="{{item.photo}}" width="400px">
+    <h1 class="text-2xl">{{item.name}}</h1>
+    <p>---{{item.city}}, {{item.state}}</p>
+    <a routerLink="details"> Learn More >></a>
+  </div>
+</div>

@@ -99,7 +99,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           }
@@ -107,5 +110,8 @@
       }
     }
   },
-  "defaultProject": "tailwind"
+  "defaultProject": "tailwind",
+  "cli": {
+    "analytics": "4bcfc39b-e646-451a-9c49-3b9ead5ca95a"
+  }
 }
