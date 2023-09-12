@@ -1,10 +1,9 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
-import {style} from "@angular/animations";
-import {ActivatedRoute, Router} from "@angular/router";
-
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { style } from '@angular/animations';
+import { ActivatedRoute, Router } from '@angular/router';
 
 export interface TestForDirectives {
-  id:number;
+  id: number;
   name: string;
   city: string;
   state: string;
@@ -17,15 +16,12 @@ export interface TestForDirectives {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-
 export class AppComponent {
+  constructor(private routes: Router) {}
 
-  constructor(private routes: Router) {
-  }
-
-  test: TestForDirectives[] =[
+  test: TestForDirectives[] = [
     {
       id: 0,
       name: 'Acme Fresh Start Housing',
@@ -34,7 +30,7 @@ export class AppComponent {
       photo: '/assets/teststst .png',
       availableUnits: 4,
       wifi: true,
-      laundry: true
+      laundry: true,
     },
     {
       id: 1,
@@ -44,7 +40,7 @@ export class AppComponent {
       photo: '/assets/teststst .png',
       availableUnits: 0,
       wifi: false,
-      laundry: true
+      laundry: true,
     },
     {
       id: 2,
@@ -54,7 +50,7 @@ export class AppComponent {
       photo: '/assets/teststst .png',
       availableUnits: 1,
       wifi: false,
-      laundry: false
+      laundry: false,
     },
     {
       id: 3,
@@ -64,7 +60,7 @@ export class AppComponent {
       photo: '/assets/teststst .png',
       availableUnits: 1,
       wifi: true,
-      laundry: false
+      laundry: false,
     },
     {
       id: 4,
@@ -74,7 +70,7 @@ export class AppComponent {
       photo: '/assets/teststst .png',
       availableUnits: 1,
       wifi: true,
-      laundry: false
+      laundry: false,
     },
     {
       id: 5,
@@ -84,7 +80,7 @@ export class AppComponent {
       photo: '/assets/teststst .png',
       availableUnits: 2,
       wifi: true,
-      laundry: true
+      laundry: true,
     },
     {
       id: 6,
@@ -94,7 +90,7 @@ export class AppComponent {
       photo: '/assets/teststst .png',
       availableUnits: 5,
       wifi: true,
-      laundry: true
+      laundry: true,
     },
     {
       id: 7,
@@ -104,7 +100,7 @@ export class AppComponent {
       photo: '/assets/teststst .png',
       availableUnits: 2,
       wifi: true,
-      laundry: true
+      laundry: true,
     },
     {
       id: 8,
@@ -114,7 +110,7 @@ export class AppComponent {
       photo: '/assets/teststst .png',
       availableUnits: 10,
       wifi: false,
-      laundry: false
+      laundry: false,
     },
     {
       id: 9,
@@ -124,15 +120,16 @@ export class AppComponent {
       photo: '/assets/teststst .png',
       availableUnits: 6,
       wifi: true,
-      laundry: true
-    }
+      laundry: true,
+    },
   ];
 
-  @ViewChild('hide') hide!: any;
+  @ViewChild('hide') hide!: boolean;
   title = 'tailwind';
 
   checked!: boolean;
 
+  clickMe() {
+    this.hide = !this.hide;
+  }
 }
-
-

@@ -4,6 +4,13 @@
 
 .container {
   &__content {
-    @apply sm:w-[50%] hover:shadow-2xl w-[100%] rounded-2xl p-[16px] flex-col justify-center text-justify p-[16px] bg-amber-200;
+    @apply w-[100%] flex-col justify-center rounded-2xl bg-amber-200 p-[16px] p-[16px] text-justify hover:shadow-2xl sm:w-[50%];
   }
+}
+
+[role="menuitem"] {
+  margin-left: 20px;
+  background: slategrey;
+  padding: 8px 16px;
+  color: white;
 }
