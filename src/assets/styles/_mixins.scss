@@ -1,0 +1,24 @@
+@import 'variables';
+
+//font-size mixins
+@mixin saas-font-size($font-size) {
+  @each $size in $font-size {
+    .font-size-#{$size} {
+      font-size: #{$size}px;
+    }
+
+    .s-#{$size} {
+      height: #{$size}px;
+      width: #{$size}px;
+      font-size: #{$size}px;
+    }
+  }
+}
+
+//colors and background-color
+
+
+
+
+
+
