@@ -15,8 +15,96 @@
   }
 }
 
-//colors and background-color
+//font-size mixins
+@mixin saas-font-weight($font-weight) {
+  @each $weight in $font-weight {
+    .font-weight-#{$weight} {
+      font-weight: #{$weight}px;
+    }
+  }
+}
 
+
+//function for complementary
+@function complementary-color($theme-colors) {
+  $complement: complement($theme-colors);
+  $light-comp: lighten($complement, 5);
+
+  @return $light-comp;
+}
+
+//colors and background-color
+@mixin sass-colors($theme-colors) {
+  @each $key, $val in $theme-colors {
+    .text--#{$key} {
+      color: $val;
+    }
+
+    .bg--#{$key} {
+      background-color: $val;
+    }
+
+    .bg--comp-#{$key} {
+      background-color: complementary-color($val);
+    }
+
+    @if($val != black and $val != white) {
+      @for $i from 1 through 9 {
+        .text--#{$key}-light-#{$i} {
+          color: mix(white, $val, $i*10)
+        }
+
+        .text--hover-#{$key}-light-#{$i} {
+          &:hover {
+            color: mix(white, $val, $i*10);
+            cursor: pointer;
+          }
+        }
+
+        .bg--#{$key}-light-#{$i} {
+          background-color: mix(white, $val, $i*10)
+        }
+      }
+    }
+  }
+}
+
+//box model
+@mixin sass-padding($spacing) {
+  @each $space in $spacing {
+    .m--#{$space} {
+      margin: #{$space}px;
+    }
+
+    .mx--#{$space} {
+      margin-left:#{$space}px;
+      margin-right: #{$space}px;
+    }
+
+    .my--#{$space} {
+      margin-top: #{$space}px;
+      margin-bottom: #{$space}px;
+    }
+
+    .mr--#{$space} {
+      margin-right: #{$space}px;
+    }
+
+    .ml--#{$space} {
+      margin-left: #{$space}px;
+    }
+  }
+}
+
+@mixin sass-spacing($padding-space, $className, $property) {
+  @each $spacing in $padding-space {
+    @each $properties in $property {
+      .#{$className}--#{$spacing} {
+        #{$properties}: #{$spacing}px;
+      }
+    }
+  }
+}
 
 
 
