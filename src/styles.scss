@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Avenir Next', sans-serif;
+}
+
 @import 'assets/styles/mixins';
 @import 'assets/styles/variables';
 
@@ -12,11 +16,12 @@
 
 @include saas-font-size($font-size);
 @include sass-colors($theme-colors);
-@include sass-padding($spacing);
-@include sass-spacing((2,4,6,8,10,12,14,16,18,20), 'p', 'padding');
+@include sass-spacing((2,4,6,8,10,12,14,16,18,20, 24), 'p', 'padding');
 @include sass-spacing((2,4,6,8,10,12,14,16,18,20), 'pl', 'padding-left');
 @include sass-spacing((2,4,6,8,10,12,14,16,18,20), 'pr', 'padding-right');
-@include sass-spacing((2,4,6,8,10,12,14,16,18,20), 'px', ('padding-right', 'padding-left'));
-@include sass-spacing((2,4,6,8,10,12,14,16,18,20), 'py', ('padding-top', 'padding-bottom'));
+@include sass-spacing((2,4,6,8,10,12,14,16,18,20, 24, 32, 36), 'px', ('padding-right', 'padding-left'));
+@include sass-spacing((2,4,6,8,10,12,14,16,18,20, 24, 32), 'py', ('padding-top', 'padding-bottom'));
 @include sass-spacing((2,4,6,8,10, 50, 100) ,'br', 'border-radius');
-@include sass-spacing((2,4,6,8,10,12,14,16,24,32), 'mt', 'margin-top');
+@include sass-spacing((2,4,6,8,10,12,14,16, 20, 24,32, 40, 64, 72), 'mt', 'margin-top');
+@include sass-spacing((2,4,6,8,10,12,14,16,24,32, 72), 'ml', 'margin-left');
+@include sass-spacing((2,4,6,8,10,12,14,16,24,32, 72), 'my', ('margin-top', 'margin-bottom'));

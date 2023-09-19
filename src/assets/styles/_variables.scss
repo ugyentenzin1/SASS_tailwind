@@ -1,4 +1,4 @@
-$font-size: (2, 12, 14, 16, 20, 60, 72);
+$font-size: (2, 12, 14, 16, 20, 24, 28, 32, 60, 72);
 $colors: (
   "primary": #fcba03,
   "secondary": #03b6fc,
@@ -10,10 +10,16 @@ $theme-colors: (
   "secondary": #03b6fc,
   "warn": #ad03fc,
   "black": black,
+  "light-black": rgba(0, 0,0, 0.2),
   "white": white,
+  "light-white": whitesmoke,
   "orange": orange,
   "purple": purple,
-  "indigo": indigo
+  "indigo": indigo,
+  "green": green,
+  "light-green": #E2E095,
+  "cornflower": cornflowerBlue,
+  "mix-gray": #64748b
 );
 
 $spacing: (2,4,5,6,7,10,12,14,16);
