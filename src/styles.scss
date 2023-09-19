@@ -18,4 +18,5 @@
 @include sass-spacing((2,4,6,8,10,12,14,16,18,20), 'pr', 'padding-right');
 @include sass-spacing((2,4,6,8,10,12,14,16,18,20), 'px', ('padding-right', 'padding-left'));
 @include sass-spacing((2,4,6,8,10,12,14,16,18,20), 'py', ('padding-top', 'padding-bottom'));
-@include sass-spacing((2,4,6,8,10) ,'br', 'border-radius');
+@include sass-spacing((2,4,6,8,10, 50, 100) ,'br', 'border-radius');
+@include sass-spacing((2,4,6,8,10,12,14,16,24,32), 'mt', 'margin-top');

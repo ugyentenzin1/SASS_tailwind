@@ -106,6 +106,13 @@
   }
 }
 
+//breakpoints
+@mixin breakpoints($breakpoints: 0) {
+  @media (min-width: $breakpoints) {
+    @content;
+  }
+}
+
 
 
 
