@@ -5,7 +5,8 @@ import {ProfileComponent} from "./profile/profile.component";
 const routes: Routes = [
   {path: '', redirectTo: 'profile', pathMatch: 'full'},
   {path: 'profile', component: ProfileComponent},
-  {path: 'journey' , loadComponent: () => import('./journey/journey.component'). then(value => value.JourneyComponent)}
+  {path: 'journey' , loadComponent: () => import('./journey/journey.component'). then(value => value.JourneyComponent)},
+  {path: 'experience' , loadComponent: () => import('./experience/experience.component'). then(value => value.ExperienceComponent)}
 ];
 
 @NgModule({
