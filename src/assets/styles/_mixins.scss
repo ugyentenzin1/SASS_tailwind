@@ -64,37 +64,44 @@
         .bg--#{$key}-light-#{$i} {
           background-color: mix(white, $val, $i*10)
         }
+
+        .bg--hover-#{$key}-light-#{$i} {
+          &:hover {
+            background-color: mix(white, $val, $i*10);
+            cursor: pointer;
+          }
+        }
       }
     }
   }
 }
 
 //box model
-@mixin sass-padding($spacing) {
-  @each $space in $spacing {
-    .m--#{$space} {
-      margin: #{$space}px;
-    }
-
-    .mx--#{$space} {
-      margin-left:#{$space}px;
-      margin-right: #{$space}px;
-    }
-
-    .my--#{$space} {
-      margin-top: #{$space}px;
-      margin-bottom: #{$space}px;
-    }
-
-    .mr--#{$space} {
-      margin-right: #{$space}px;
-    }
-
-    .ml--#{$space} {
-      margin-left: #{$space}px;
-    }
-  }
-}
+//@mixin sass-padding($spacing) {
+//  @each $space in $spacing {
+//    .m--#{$space} {
+//      margin: #{$space}px;
+//    }
+//
+//    .mx--#{$space} {
+//      margin-left:#{$space}px;
+//      margin-right: #{$space}px;
+//    }
+//
+//    .my--#{$space} {
+//      margin-top: #{$space}px;
+//      margin-bottom: #{$space}px;
+//    }
+//
+//    .mr--#{$space} {
+//      margin-right: #{$space}px;
+//    }
+//
+//    .ml--#{$space} {
+//      margin-left: #{$space}px;
+//    }
+//  }
+//}
 
 @mixin sass-spacing($padding-space, $className, $property) {
   @each $spacing in $padding-space {
