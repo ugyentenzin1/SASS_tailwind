@@ -10,6 +10,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
 import { JourneyComponent } from './journey/journey.component';
+import {MessageService} from "primeng/api";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, ProfileComponent],
@@ -20,8 +22,9 @@ import { JourneyComponent } from './journey/journey.component';
     CheckboxModule,
     PaginatorModule,
     InputTextModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

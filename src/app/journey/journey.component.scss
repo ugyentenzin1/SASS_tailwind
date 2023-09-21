@@ -1,0 +1,21 @@
+
+::ng-deep.p-menuitem-link {
+  width: 200px;
+  background-color: transparent !important;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .p-steps-title {
+    color: white !important;
+  }
+
+}
+
+::ng-deep.p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
+  color: lightskyblue !important;
+  box-shadow: none;
+  border-bottom: 2px solid lightskyblue;
+  border-radius: 0 !important;
+}
