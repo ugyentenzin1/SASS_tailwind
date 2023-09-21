@@ -14,3 +14,19 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.background-img {
+
+  @media (max-width: 720px) {
+
+    background-image: url('/assets/images /tm-astro-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+}
+
+video {
+  max-width: none!important;
+}
