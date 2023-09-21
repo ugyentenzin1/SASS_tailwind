@@ -9,6 +9,7 @@ import { PaginatorModule } from 'primeng/paginator';
 import { InputTextModule } from 'primeng/inputtext';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
+import { JourneyComponent } from './journey/journey.component';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, ProfileComponent],
