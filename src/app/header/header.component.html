@@ -1,30 +1,72 @@
-<div class="tw-flex tw-justify-between px--32 mt--64 name">
+<div class="tw-hidden md:tw-block tw-flex tw-justify-between px--32 mt--64 name">
   <div class="tw-w-[100%] ml--32 text--white">
     <h1 class="font-size-40 name text--light-white"><i>Mr. Ugyen Tenzin</i></h1>
     <p class="font-size-16 tw-tracking-wide">Software Engineer</p>
 
     <nav class="mt--40">
      <div routerLink="profile" [routerLinkActive]="'active'" class="font-size-24 text--hover-mix-gray-light-1 bg--hover-light-green-light-8 br--16 bg--light-black px--16 py--16 tw-cursor-pointer tw-leading-10
-hover:tw-scale-95 hover:tw-transition-all hover:tw-brightness-95">
+      hover:tw-scale-95 hover:tw-transition-all hover:tw-brightness-95">
        <p class="tw-tracking-widest">Profile</p>
      </div>
       <div routerLink="journey" [routerLinkActive]="'active'" class="font-size-24 bg--light-black px--16 py--16 tw-cursor-pointer tw-leading-10 mt--20 text--hover-mix-gray-light-1 bg--hover-light-green-light-8
-hover:tw-scale-95 hover:tw-transition-all hover:tw-brightness-95">
+      hover:tw-scale-95 hover:tw-transition-all hover:tw-brightness-95">
         <p class="tw-tracking-widest">Journey</p>
       </div>
       <div routerLink="experience" [routerLinkActive]="'active'" class="mt--20 font-size-24 bg--light-black px--16 py--16 tw-cursor-pointer tw-leading-10 text--hover-mix-gray-light-1 bg--hover-light-green-light-8
-hover:tw-scale-95 hover:tw-transition-all hover:tw-brightness-95">
+        hover:tw-scale-95 hover:tw-transition-all hover:tw-brightness-95">
         <p class="tw-tracking-widest">Experience</p>
       </div>
-      <div routerLink="skills" [routerLinkActive]="'active'" class=" mt--20 font-size-24 bg--light-black px--16 py--16 tw-cursor-pointer tw-leading-10 text--hover-mix-gray-light-1 bg--hover-light-green-light-8
-hover:tw-scale-95 hover:tw-transition-all hover:tw-brisghtness-95">
+      <div routerLink="skills" [routerLinkActive]="'active'" class="mt--20 font-size-24 bg--light-black px--16 py--16 tw-cursor-pointer tw-leading-10 text--hover-mix-gray-light-1 bg--hover-light-green-light-8
+        hover:tw-scale-95 hover:tw-transition-all hover:tw-brisghtness-95">
         <p class="tw-tracking-widest">Skills</p>
       </div>
-      <div routerLink="gallery" [routerLinkActive]="'active'" class=" mt--20 font-size-24 bg--light-black px--16 py--16 tw-cursor-pointer tw-leading-10 text--hover-mix-gray-light-1 bg--hover-light-green-light-8
-hover:tw-scale-95 hover:tw-transition-all hover:tw-brightness-95">
+      <div routerLink="gallery" [routerLinkActive]="'active'" class="mt--20 font-size-24 bg--light-black px--16 py--16 tw-cursor-pointer tw-leading-10 text--hover-mix-gray-light-1 bg--hover-light-green-light-8
+        hover:tw-scale-95 hover:tw-transition-all hover:tw-brightness-95">
         <p class="tw-tracking-widest">Gallery</p>
       </div>
     </nav>
   </div>
 </div>
 
+<!--Mobile view-->
+<div class="tw-fixed tw-top-0 tw-block md:tw-hidden tw-flex tw-justify-between tw-items-center tw-w-full pt--16 px--16"
+     [ngClass]="{'nav_bar_onchange': hasScrolled}">
+  <p-button role="button" aria-label="Menu Button" (click)="toogleSideNav()">
+    <i class="pi pi-list"></i>
+  </p-button>
+
+  <div class="tw-flex tw-flex-col tw-justify-end tw-items-end">
+    <h1 class="name font-size-24 text--light-white"><i>Mr. Ugyen Tenzin</i></h1>
+    <p class="font-size-14 text--light-white tw-tracking-wide">Software Engineer</p>
+  </div>
+</div>
+
+<div class="tw-fixed tw-bg-[slategray] tw-top-0 tw-h-[100dvh] tw-w-full text--white p--24 tw-z-[10]" *ngIf="sideNav">
+  <div class="tw-flex tw-items-center tw-justify-end">
+    <p-button (click)="toogleSideNav()" role="button" aria-label="close button for menu">
+      <i class="pi pi-times">close</i>
+    </p-button>
+  </div>
+  <div class="tw-flex tw-flex-col tw-text-center tw-items-center tw-justify-center">
+    <div routerLink="profile" (click)="toogleSideNav()" [routerLinkActive]="'active'" class="tw-w-full font-size-24 mt--16 text--hover-mix-gray-light-1 bg--hover-light-green-light-8 br--16 bg--light-black px--16 py--16 tw-cursor-pointer tw-leading-10
+      hover:tw-scale-95 hover:tw-transition-all hover:tw-brightness-95">
+      <p class="tw-tracking-widest">Profile</p>
+    </div>
+    <div routerLink="journey" (click)="toogleSideNav()" [routerLinkActive]="'active'" class="tw-w-full font-size-24 bg--light-black px--16 py--16 tw-cursor-pointer tw-leading-10 mt--20 text--hover-mix-gray-light-1 bg--hover-light-green-light-8
+      hover:tw-scale-95 hover:tw-transition-all hover:tw-brightness-95">
+      <p class="tw-tracking-widest">Journey</p>
+    </div>
+    <div routerLink="experience" (click)="toogleSideNav()" [routerLinkActive]="'active'" class="tw-w-full mt--20 font-size-24 bg--light-black px--16 py--16 tw-cursor-pointer tw-leading-10 text--hover-mix-gray-light-1 bg--hover-light-green-light-8
+        hover:tw-scale-95 hover:tw-transition-all hover:tw-brightness-95">
+      <p class="tw-tracking-widest">Experience</p>
+    </div>
+    <div routerLink="skills" (click)="toogleSideNav()" [routerLinkActive]="'active'" class="tw-w-full mt--20 font-size-24 bg--light-black px--16 py--16 tw-cursor-pointer tw-leading-10 text--hover-mix-gray-light-1 bg--hover-light-green-light-8
+        hover:tw-scale-95 hover:tw-transition-all hover:tw-brisghtness-95">
+      <p class="tw-tracking-widest">Skills</p>
+    </div>
+    <div routerLink="gallery" (click)="toogleSideNav()" [routerLinkActive]="'active'" class="tw-w-full mt--20 font-size-24 bg--light-black px--16 py--16 tw-cursor-pointer tw-leading-10 text--hover-mix-gray-light-1 bg--hover-light-green-light-8
+        hover:tw-scale-95 hover:tw-transition-all hover:tw-brightness-95">
+      <p class="tw-tracking-widest">Gallery</p>
+    </div>
+  </div>
+</div>

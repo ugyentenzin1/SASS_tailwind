@@ -2,16 +2,16 @@
   <source src="assets/video/bg-video.mp4">
 </video>
 <div class="sm:tw-flex sm:tw-flex-row tw-justify-between">
-  <div class="tw-w-[70%] tw-flex tw-flex-col tw-justify-center tw-items-center">
+  <div class="tw-w-full md:tw-w-[30%]">
+    <app-header></app-header>
+  </div>
+  <div class="tw-w-full md:tw-w-[70%] tw-flex tw-flex-col tw-justify-center tw-items-center mt--80 md:mt--0">
     <router-outlet></router-outlet>
-    <div class="tw-flex tw-justify-center tw-items-center bg--white py--16 px--36 mt--32 tw-overflow-hidden
+    <div class="tw-flex tw-justify-center tw-items-center bg--white py--16 px--36 mt--16 md:mt--32 tw-overflow-hidden
      tw-relative tw-cursor-pointer hover:tw-brightness-95 hover:tw-scale-110 hover:tw-transition-all">
       <div class="tw-bg-gradient-to-r tw-from-transparent tw-to-orange-500 tw-absolute tw-top-0 tw-left-0 tw-w-0 tw-h-full tw-transition-all"></div>
       <i></i>
       <span>Contact Me</span>
     </div>
-  </div>
-  <div class="tw-w-[30%]">
-    <app-header></app-header>
   </div>
 </div>
